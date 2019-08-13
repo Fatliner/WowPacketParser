@@ -17,7 +17,7 @@ namespace WowPacketParser.SQL.Builders
         {
             var stringBuilder = new StringBuilder();
 
-            if (BinaryPacketReader.GetLocale() == LocaleConstant.enUS)
+            if (ClientLocale.PacketLocale == LocaleConstant.enUS)
             {
                 // ReSharper disable once LoopCanBePartlyConvertedToQuery
                 foreach (DB2Hash hashValue in Enum.GetValues(typeof (DB2Hash)))
@@ -63,6 +63,31 @@ namespace WowPacketParser.SQL.Builders
             }
 
             return "TRUNCATE `hotfix_data`;" + Environment.NewLine + new SQLInsert<HotfixData>(rows, false).Build();
+        }
+
+        [BuilderMethod(true)]
+        public static string HotfixBlob()
+        {
+            if (Storage.HotfixBlobs.IsEmpty())
+                return string.Empty;
+
+            if (!Settings.SQLOutputFlag.HasAnyFlagBit(SQLOutput.hotfix_blob))
+                return string.Empty;
+
+            var rows = new RowList<HotfixBlob>();
+
+            foreach (var hotfix in Storage.HotfixBlobs)
+            {
+                var row = new Row<HotfixBlob>
+                {
+                    Data = hotfix.Item1,
+                    Comment = hotfix.Item1.TableHash.ToString()
+                };
+
+                rows.Add(row);
+            }
+
+            return "TRUNCATE `hotfix_blob`;" + Environment.NewLine + new SQLInsert<HotfixBlob>(rows, false).Build();
         }
 
         // Special Hotfix Builders

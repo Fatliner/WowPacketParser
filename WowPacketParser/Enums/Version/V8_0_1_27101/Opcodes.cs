@@ -1,4 +1,4 @@
-﻿using WowPacketParser.Misc;
+using WowPacketParser.Misc;
 
 namespace WowPacketParser.Enums.Version.V8_0_1_27101
 {
@@ -13,9 +13,8 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
                 case Direction.ServerToClient:
                     return ServerOpcodes;
                 default:
-                    break;
+                    return MiscOpcodes;
             }
-            return MiscOpcodes;
         }
 
         private static readonly BiDictionary<Opcode, int> ClientOpcodes = new BiDictionary<Opcode, int>
@@ -421,7 +420,6 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.CMSG_MOVE_FEATHER_FALL_ACK, 0x3A19},
             {Opcode.CMSG_MOVE_FORCE_FLIGHT_BACK_SPEED_CHANGE_ACK, 0x3A2B},
             {Opcode.CMSG_MOVE_FORCE_FLIGHT_SPEED_CHANGE_ACK, 0x3A2A},
-            {Opcode.CMSG_MOVE_FORCE_MOVEMENT_FORCE_SPEED_CHANGE_ACK, 0x3A3D},
             {Opcode.CMSG_MOVE_FORCE_PITCH_RATE_CHANGE_ACK, 0x3A2F},
             {Opcode.CMSG_MOVE_FORCE_ROOT_ACK, 0x3A0B},
             {Opcode.CMSG_MOVE_FORCE_RUN_BACK_SPEED_CHANGE_ACK, 0x3A09},
@@ -445,6 +443,7 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.CMSG_MOVE_SET_FACING, 0x3A06},
             {Opcode.CMSG_MOVE_SET_FLY, 0x3A25},
             {Opcode.CMSG_MOVE_SET_IGNORE_MOVEMENT_FORCES_ACK, 0x3A23},
+            {Opcode.CMSG_MOVE_SET_MOD_MOVEMENT_FORCE_MAGNITUDE_ACK, 0x3A3D},
             {Opcode.CMSG_MOVE_SET_PITCH, 0x3A07},
             {Opcode.CMSG_MOVE_SET_RUN_MODE, 0x39F2},
             {Opcode.CMSG_MOVE_SET_VEHICLE_REC_ID_ACK, 0x3A11},
@@ -1070,6 +1069,7 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.SMSG_GARRISON_LIST_MISSIONS_CHEAT_RESULT, 0x292A},
             {Opcode.SMSG_GARRISON_MISSION_AREA_BONUS_ADDED, 0x2910},
             {Opcode.SMSG_GARRISON_MISSION_BONUS_ROLL_RESULT, 0x290C},
+            {Opcode.SMSG_GARRISON_MISSION_LIST_UPDATE, 0x290E},
             {Opcode.SMSG_GARRISON_MISSION_REWARD_RESPONSE, 0x292D},
             {Opcode.SMSG_GARRISON_MISSION_UPDATE_CAN_START, 0x2911},
             {Opcode.SMSG_GARRISON_NUM_FOLLOWER_ACTIVATIONS_REMAINING, 0x2917},
@@ -1107,6 +1107,7 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.SMSG_GOSSIP_COMPLETE, 0x2A96},
             {Opcode.SMSG_GOSSIP_MESSAGE, 0x2A97},
             {Opcode.SMSG_GOSSIP_POI, 0x27E4},
+            {Opcode.SMSG_GOSSIP_TEXT_UPDATE, 0x2A98},
             {Opcode.SMSG_GROUP_ACTION_THROTTLED, 0x259C},
             {Opcode.SMSG_GROUP_DECLINE, 0x27DF},
             {Opcode.SMSG_GROUP_DESTROYED, 0x27E1},
@@ -1219,8 +1220,12 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.SMSG_LFG_DISABLED, 0x2A33},
             {Opcode.SMSG_LFG_INSTANCE_SHUTDOWN_COUNTDOWN, 0x2A25},
             {Opcode.SMSG_LFG_JOIN_RESULT, 0x2A1C},
+            {Opcode.SMSG_LFG_LIST_APPLICANT_LIST_UPDATE, 0x2A2B},
+            {Opcode.SMSG_LFG_LIST_APPLICATION_STATUS_UPDATE, 0x2A28},
+            {Opcode.SMSG_LFG_LIST_APPLY_TO_GROUP_RESULT, 0x2A29},
             {Opcode.SMSG_LFG_LIST_JOIN_RESULT, 0x2A1D},
             {Opcode.SMSG_LFG_LIST_SEARCH_RESULTS, 0x2A1E},
+            {Opcode.SMSG_LFG_LIST_SEARCH_RESULTS_UPDATE, 0x2A2C},
             {Opcode.SMSG_LFG_LIST_SEARCH_STATUS, 0x2A1F},
             {Opcode.SMSG_LFG_LIST_UPDATE_BLACKLIST, 0x2A2A},
             {Opcode.SMSG_LFG_LIST_UPDATE_STATUS, 0x2A26},
@@ -1309,7 +1314,7 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.SMSG_MOVE_SET_HOVERING, 0x2DCF},
             {Opcode.SMSG_MOVE_SET_IGNORE_MOVEMENT_FORCES, 0x2DD7},
             {Opcode.SMSG_MOVE_SET_LAND_WALK, 0x2DCC},
-            {Opcode.SMSG_MOVE_SET_MOVEMENT_FORCE_SPEED, 0x2DB4},
+            {Opcode.SMSG_MOVE_SET_MOD_MOVEMENT_FORCE_MAGNITUDE, 0x2DB4},
             {Opcode.SMSG_MOVE_SET_NORMAL_FALL, 0x2DCE},
             {Opcode.SMSG_MOVE_SET_PITCH_RATE, 0x2DC6},
             {Opcode.SMSG_MOVE_SET_RUN_BACK_SPEED, 0x2DBF},
@@ -1360,7 +1365,7 @@ namespace WowPacketParser.Enums.Version.V8_0_1_27101
             {Opcode.SMSG_MOVE_UPDATE_FLIGHT_BACK_SPEED, 0x2DAA},
             {Opcode.SMSG_MOVE_UPDATE_FLIGHT_SPEED, 0x2DA9},
             {Opcode.SMSG_MOVE_UPDATE_KNOCK_BACK, 0x2DB0},
-            {Opcode.SMSG_MOVE_UPDATE_MOVEMENT_FORCE_SPEED, 0x2DB1},
+            {Opcode.SMSG_MOVE_UPDATE_MOD_MOVEMENT_FORCE_MAGNITUDE, 0x2DB1},
             {Opcode.SMSG_MOVE_UPDATE_PITCH_RATE, 0x2DAC},
             {Opcode.SMSG_MOVE_UPDATE_REMOVE_MOVEMENT_FORCE, 0x2DB3},
             {Opcode.SMSG_MOVE_UPDATE_RUN_BACK_SPEED, 0x2DA5},

@@ -115,12 +115,25 @@ namespace WowPacketParser.Misc
             return new Quaternion(packed);
         }
 
+        public Quaternion ReadQuaternion()
+        {
+            return new Quaternion(ReadSingle(), ReadSingle(), ReadSingle(), ReadSingle());
+        }
+
         public string ReadWoWString(int len)
         {
             Encoding encoding = Encoding.UTF8;
             var bytes = ReadBytes(len).Where(b => b != 0).ToArray();
             string s = encoding.GetString(bytes);
             return s;
+        }
+
+        public string ReadDynamicString(int len)
+        {
+            if (len == 1)
+                return string.Empty;
+
+            return ReadWoWString(len);
         }
 
         public string ReadCString(Encoding encoding)
@@ -394,6 +407,16 @@ namespace WowPacketParser.Misc
             return AddValue(name, ReadWoWString((int)len), indexes);
         }
 
+        public string ReadDynamicString(string name, int len, params object[] indexes)
+        {
+            return AddValue(name, ReadDynamicString(len), indexes);
+        }
+
+        public string ReadDynamicString(string name, uint len, params object[] indexes)
+        {
+            return AddValue(name, ReadDynamicString((int)len), indexes);
+        }
+
         public string ReadCString(string name, params object[] indexes)
         {
             return AddValue(name, ReadCString(), indexes);
@@ -469,6 +492,11 @@ namespace WowPacketParser.Misc
         public Quaternion ReadPackedQuaternion(string name, params object[] indexes)
         {
             return AddValue(name, ReadPackedQuaternion(), indexes);
+        }
+
+        public Quaternion ReadQuaternion(string name, params object[] indexes)
+        {
+            return AddValue(name, ReadQuaternion(), indexes);
         }
 
         public DateTime ReadTime(string name, params object[] indexes)
@@ -555,16 +583,20 @@ namespace WowPacketParser.Misc
 
         public Bit ReadBit()
         {
-            ++_bitpos;
-
-            if (_bitpos > 7)
+            if (_bitpos == 8)
             {
                 _bitpos = 0;
                 _curbitval = ReadByte();
             }
 
             var bit = ((_curbitval >> (7 - _bitpos)) & 1) != 0;
+            ++_bitpos;
             return bit;
+        }
+
+        public bool HasUnreadBitsInBuffer()
+        {
+            return _bitpos != 8;
         }
 
         public void ResetBitReader()

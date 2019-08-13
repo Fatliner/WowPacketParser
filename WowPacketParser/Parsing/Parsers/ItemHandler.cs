@@ -30,7 +30,7 @@ namespace WowPacketParser.Parsing.Parsers
 
             var objectName = new ObjectName
             {
-                ObjectType = ObjectType.Item,
+                ObjectType = StoreNameType.Item,
                 ID = (int)entry,
                 Name = name
             };
@@ -496,7 +496,7 @@ namespace WowPacketParser.Parsing.Parsers
 
             item.AllowedClasses = packet.ReadInt32E<ClassMask>("Allowed Classes");
 
-            item.AllowedRaces = packet.ReadInt32E<RaceMask>("Allowed Races");
+            item.AllowedRaces = packet.ReadUInt32E<RaceMask>("Allowed Races");
 
             item.ItemLevel = packet.ReadUInt32("Item Level");
 
@@ -1000,7 +1000,7 @@ namespace WowPacketParser.Parsing.Parsers
                 item.CurrencySubstitutionID = packet.ReadUInt32("Currency Substitution Id");
                 item.CurrencySubstitutionCount = packet.ReadUInt32("Currency Substitution Count");
 
-                Storage.ObjectNames.Add(new ObjectName { ObjectType = ObjectType.Item, ID = (int)entry, Name = item.Name }, packet.TimeSpan);
+                Storage.ObjectNames.Add(new ObjectName { ObjectType = StoreNameType.Item, ID = (int)entry, Name = item.Name }, packet.TimeSpan);
             }
 
             packet.ReadUInt32("Type");
@@ -1169,7 +1169,7 @@ namespace WowPacketParser.Parsing.Parsers
                     item.CurrencySubstitutionID = packet.ReadUInt32("Currency Substitution Id");
                     item.CurrencySubstitutionCount = packet.ReadUInt32("Currency Substitution Count");
 
-                    Storage.ObjectNames.Add(new ObjectName { ObjectType = ObjectType.Item, ID = (int)itemId, Name = item.Name }, packet.TimeSpan);
+                    Storage.ObjectNames.Add(new ObjectName { ObjectType = StoreNameType.Item, ID = (int)itemId, Name = item.Name }, packet.TimeSpan);
                     break;
                 }
                 case DB2Hash.KeyChain:

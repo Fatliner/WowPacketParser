@@ -50,7 +50,7 @@ namespace WowPacketParser.SQL
             {
                 if (objectName.Item1.ObjectType != null && objectName.Item1.ID != null)
                 {
-                    var type = FromObjectType(objectName.Item1.ObjectType.Value);
+                    var type = objectName.Item1.ObjectType.Value;
                     Dictionary<int, string> names;
                     if (!SQLDatabase.NameStores.TryGetValue(type, out names))
                     {
@@ -59,7 +59,7 @@ namespace WowPacketParser.SQL
                     }
 
                     if (!names.ContainsKey(objectName.Item1.ID.Value))
-                        names.Add(objectName.Item1.ID.Value, objectName.Item1.Name);                        
+                        names.Add(objectName.Item1.ID.Value, objectName.Item1.Name);
                 }
             }
         }
@@ -114,7 +114,10 @@ namespace WowPacketParser.SQL
                                Settings.TargetedDatabase == TargetedDatabase.WarlordsOfDraenor)
                               ||
                               (ClientVersion.Expansion == ClientType.Legion &&
-                               Settings.TargetedDatabase == TargetedDatabase.Legion)))
+                               Settings.TargetedDatabase == TargetedDatabase.Legion)
+                              ||
+                              (ClientVersion.Expansion == ClientType.BattleForAzeroth &&
+                               Settings.TargetedDatabase == TargetedDatabase.BattleForAzeroth)))
                         {
                             Trace.WriteLine(
                                 $"{i}/{builderMethods.Count} - Error: Couldn't generate SQL output of {method.Name} since the targeted database and the sniff version don't match.");

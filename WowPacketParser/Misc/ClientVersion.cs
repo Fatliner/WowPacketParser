@@ -222,6 +222,62 @@ namespace WowPacketParser.Misc
             new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V7_3_5_26822, new DateTime(2018, 06, 12)),
             new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V7_3_5_26899, new DateTime(2018, 06, 22)),
             new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V7_3_5_26972, new DateTime(2018, 06, 29)),
+
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27101, new DateTime(2018, 07, 17)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27144, new DateTime(2018, 07, 20)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27165, new DateTime(2018, 07, 24)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27178, new DateTime(2018, 07, 26)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27219, new DateTime(2018, 08, 01)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27291, new DateTime(2018, 08, 08)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27326, new DateTime(2018, 08, 10)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27355, new DateTime(2018, 08, 13)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27356, new DateTime(2018, 08, 13)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27366, new DateTime(2018, 08, 14)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27377, new DateTime(2018, 08, 15)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27404, new DateTime(2018, 08, 21)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27481, new DateTime(2018, 08, 28)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27547, new DateTime(2018, 08, 31)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27602, new DateTime(2018, 09, 05)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27791, new DateTime(2018, 09, 20)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27843, new DateTime(2018, 09, 22)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_27980, new DateTime(2018, 10, 02)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_0_1_28153, new DateTime(2018, 10, 18)),
+
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_28724, new DateTime(2018, 12, 11)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_28768, new DateTime(2018, 12, 13)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_28807, new DateTime(2018, 12, 18)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_28822, new DateTime(2018, 12, 20)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_28833, new DateTime(2018, 12, 22)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29088, new DateTime(2019, 01, 16)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29139, new DateTime(2019, 01, 22)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29235, new DateTime(2019, 01, 30)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29285, new DateTime(2019, 02, 05, 17, 15, 00)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29297, new DateTime(2019, 02, 05, 20, 40, 00)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29482, new DateTime(2019, 02, 21)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29600, new DateTime(2019, 03, 04)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_0_29621, new DateTime(2019, 03, 06)),
+
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29683, new DateTime(2019, 03, 06)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29701, new DateTime(2019, 03, 12, 11, 00, 20)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29704, new DateTime(2019, 03, 12, 15, 45, 18)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29705, new DateTime(2019, 03, 13, 13, 30, 18)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29718, new DateTime(2019, 03, 13, 20, 00, 00)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29732, new DateTime(2019, 03, 14)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29737, new DateTime(2019, 03, 16)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29814, new DateTime(2019, 03, 22)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29869, new DateTime(2019, 03, 27)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29896, new DateTime(2019, 04, 01)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_29981, new DateTime(2019, 04, 05)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_30477, new DateTime(2019, 05, 31)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_1_5_30706, new DateTime(2019, 06, 05)),
+
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_30898, new DateTime(2019, 06, 25, 16, 05, 18)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_30918, new DateTime(2019, 06, 25, 18, 48, 19)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_30920, new DateTime(2019, 06, 26, 0, 35, 18)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_30948, new DateTime(2019, 06, 27)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_30993, new DateTime(2019, 07, 02)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_31229, new DateTime(2019, 07, 25)),
+            new KeyValuePair<ClientVersionBuild, DateTime>(ClientVersionBuild.V8_2_0_31429, new DateTime(2019, 08, 08)),
         };
 
         private static ClientType _expansion;
@@ -259,6 +315,7 @@ namespace WowPacketParser.Misc
                     case ClientVersionBuild.V3_0_8_9464:
                     case ClientVersionBuild.V3_0_8a_9506:
                     case ClientVersionBuild.V3_0_9_9551:
+                        return ClientVersionBuild.V3_0_9_9551;
                     case ClientVersionBuild.V3_1_0_9767:
                     case ClientVersionBuild.V3_1_1_9806:
                     case ClientVersionBuild.V3_1_1a_9835:
@@ -290,8 +347,11 @@ namespace WowPacketParser.Misc
                         return ClientVersionBuild.V4_2_0_14333;
                     case ClientVersionBuild.V4_3_0_15005:
                     case ClientVersionBuild.V4_3_0a_15050:
+                        return ClientVersionBuild.V4_3_0_15005;
                     case ClientVersionBuild.V4_3_2_15211:
+                        return ClientVersionBuild.V4_3_2_15211;
                     case ClientVersionBuild.V4_3_3_15354:
+                        return ClientVersionBuild.V4_3_3_15354;
                     case ClientVersionBuild.V4_3_4_15595:
                         return ClientVersionBuild.V4_3_4_15595;
                     case ClientVersionBuild.V5_0_4_16016:
@@ -449,6 +509,60 @@ namespace WowPacketParser.Misc
                     case ClientVersionBuild.V7_3_5_26899:
                     case ClientVersionBuild.V7_3_5_26972:
                         return ClientVersionBuild.V7_0_3_22248;
+                    case ClientVersionBuild.V8_0_1_27101:
+                    case ClientVersionBuild.V8_0_1_27144:
+                    case ClientVersionBuild.V8_0_1_27165:
+                    case ClientVersionBuild.V8_0_1_27178:
+                    case ClientVersionBuild.V8_0_1_27219:
+                    case ClientVersionBuild.V8_0_1_27291:
+                    case ClientVersionBuild.V8_0_1_27326:
+                    case ClientVersionBuild.V8_0_1_27355:
+                    case ClientVersionBuild.V8_0_1_27356:
+                    case ClientVersionBuild.V8_0_1_27366:
+                    case ClientVersionBuild.V8_0_1_27377:
+                    case ClientVersionBuild.V8_0_1_27404:
+                    case ClientVersionBuild.V8_0_1_27481:
+                    case ClientVersionBuild.V8_0_1_27547:
+                    case ClientVersionBuild.V8_0_1_27602:
+                    case ClientVersionBuild.V8_0_1_27791:
+                    case ClientVersionBuild.V8_0_1_27843:
+                    case ClientVersionBuild.V8_0_1_27980:
+                    case ClientVersionBuild.V8_0_1_28153:
+                        return ClientVersionBuild.V8_0_1_27101;
+                    case ClientVersionBuild.V8_1_0_28724:
+                    case ClientVersionBuild.V8_1_0_28768:
+                    case ClientVersionBuild.V8_1_0_28807:
+                    case ClientVersionBuild.V8_1_0_28822:
+                    case ClientVersionBuild.V8_1_0_28833:
+                    case ClientVersionBuild.V8_1_0_29088:
+                    case ClientVersionBuild.V8_1_0_29139:
+                    case ClientVersionBuild.V8_1_0_29235:
+                    case ClientVersionBuild.V8_1_0_29285:
+                    case ClientVersionBuild.V8_1_0_29297:
+                    case ClientVersionBuild.V8_1_0_29482:
+                    case ClientVersionBuild.V8_1_0_29600:
+                    case ClientVersionBuild.V8_1_0_29621:
+                    case ClientVersionBuild.V8_1_5_29683:
+                    case ClientVersionBuild.V8_1_5_29701:
+                    case ClientVersionBuild.V8_1_5_29704:
+                    case ClientVersionBuild.V8_1_5_29705:
+                    case ClientVersionBuild.V8_1_5_29718:
+                    case ClientVersionBuild.V8_1_5_29732:
+                    case ClientVersionBuild.V8_1_5_29737:
+                    case ClientVersionBuild.V8_1_5_29814:
+                    case ClientVersionBuild.V8_1_5_29869:
+                    case ClientVersionBuild.V8_1_5_29896:
+                    case ClientVersionBuild.V8_1_5_29981:
+                    case ClientVersionBuild.V8_1_5_30477:
+                    case ClientVersionBuild.V8_1_5_30706:
+                    case ClientVersionBuild.V8_2_0_30898:
+                    case ClientVersionBuild.V8_2_0_30918:
+                    case ClientVersionBuild.V8_2_0_30920:
+                    case ClientVersionBuild.V8_2_0_30948:
+                    case ClientVersionBuild.V8_2_0_30993:
+                    case ClientVersionBuild.V8_2_0_31229:
+                    case ClientVersionBuild.V8_2_0_31429:
+                        return ClientVersionBuild.V8_0_1_27101;
                     case ClientVersionBuild.BattleNetV37165:
                         return ClientVersionBuild.BattleNetV37165;
                     case ClientVersionBuild.Zero:
@@ -459,17 +573,16 @@ namespace WowPacketParser.Misc
             }
         }
 
-        public static ClientVersionBuild FallbackVersionDefiningBuild
+        public static ClientVersionBuild FallbackVersionDefiningBuild(ClientVersionBuild definingbuild)
         {
-            get
+            switch (definingbuild)
             {
-                switch (VersionDefiningBuild)
-                {
-                    case ClientVersionBuild.V7_0_3_22248:
-                        return ClientVersionBuild.V6_0_2_19033;
-                    default:
-                        return ClientVersionBuild.Zero;
-                }
+                case ClientVersionBuild.V7_0_3_22248:
+                    return ClientVersionBuild.V6_0_2_19033;
+                case ClientVersionBuild.V8_0_1_27101:
+                    return ClientVersionBuild.V7_0_3_22248;
+                default:
+                    return ClientVersionBuild.Zero;
             }
         }
 
@@ -481,6 +594,8 @@ namespace WowPacketParser.Misc
 
         private static ClientType GetExpansion(ClientVersionBuild build)
         {
+            if (build >= ClientVersionBuild.V8_0_1_27101)
+                return ClientType.BattleForAzeroth;
             if (build >= ClientVersionBuild.V7_0_3_22248)
                 return ClientType.Legion;
             if (build >= ClientVersionBuild.V6_0_2_19033)
@@ -517,18 +632,21 @@ namespace WowPacketParser.Misc
             Handler.ResetHandlers();
             UpdateFields.ResetUFDictionaries();
 
-            if (FallbackVersionDefiningBuild != ClientVersionBuild.Zero)
+            ClientVersionBuild tmpFallback = FallbackVersionDefiningBuild(VersionDefiningBuild);
+
+            while (tmpFallback != ClientVersionBuild.Zero)
             {
                 try
                 {
-                    var asm = Assembly.Load($"WowPacketParserModule.{FallbackVersionDefiningBuild}");
-                    Trace.WriteLine($"Loading module WowPacketParserModule.{FallbackVersionDefiningBuild}.dll (fallback)");
+                    var asm = Assembly.Load($"WowPacketParserModule.{tmpFallback}");
+                    Trace.WriteLine($"Loading module WowPacketParserModule.{tmpFallback}.dll (fallback)");
 
-                    Handler.LoadHandlers(asm, FallbackVersionDefiningBuild);
+                    Handler.LoadHandlers(asm, tmpFallback);
                 }
                 catch (FileNotFoundException)
                 {
                 }
+                tmpFallback = FallbackVersionDefiningBuild(tmpFallback);
             }
 
             try
